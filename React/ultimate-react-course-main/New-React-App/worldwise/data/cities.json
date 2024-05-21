@@ -25,62 +25,27 @@
       "id": "17806751"
     },
     {
+      "id": "2a5e",
       "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
-      "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
-      },
-      "id": "98443197"
-    },
-    {
-      "id": "1071",
-      "cityName": "Fuentes de Ebro",
-      "countryName": "Spain",
-      "date": "2024-05-16T12:01:54.250Z",
+      "countryName": "Germany",
+      "date": "2024-05-16T16:21:26.157Z",
       "notes": "",
+      "emoji": "🇩🇪",
       "position": {
-        "lat": "41.50857729743935",
-        "lng": "-0.6152343750000001"
+        "lat": "52.429222277955134",
+        "lng": "13.46923828125"
       }
     },
     {
-      "id": "ea74",
-      "cityName": "Kebili",
+      "id": "54d3",
+      "cityName": "Bargou",
       "countryName": "Tunisia",
-      "date": "2024-05-16T13:50:30.647Z",
+      "date": "2024-05-17T07:06:03.858Z",
       "notes": "",
       "emoji": "🇹🇳",
       "position": {
-        "lat": "33.7243396617476",
-        "lng": "9.294433593750002"
-      }
-    },
-    {
-      "id": "593a",
-      "cityName": "Villahermosa",
-      "countryName": "Spain",
-      "date": "2024-05-16T13:56:50.135Z",
-      "notes": "",
-      "emoji": "🇪🇸",
-      "position": {
-        "lat": "38.77121637244273",
-        "lng": "-2.8784179687500004"
-      }
-    },
-    {
-      "id": "c950",
-      "cityName": "Herrera del Duque",
-      "countryName": "Spain",
-      "date": "2024-05-16T13:57:35.183Z",
-      "notes": "",
-      "emoji": "🇪🇸",
-      "position": {
-        "lat": "39.232253141714914",
-        "lng": "-5.031738281250001"
+        "lat": "36.03133177633189",
+        "lng": "9.492187500000002"
       }
     }
   ]
