@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { faker } from "@faker-js/faker";
+import { PostProvider } from "./PostContext";
 
 function createRandomPost() {
   return {
@@ -25,9 +26,9 @@ function App() {
         )
       : posts;
 
-  function handleAddPost(post) {
+  const handleAddPost = useCallback(function handleAddPost(post) {
     setPosts((posts) => [post, ...posts]);
-  }
+  }, []);
 
   function handleClearPosts() {
     setPosts([]);
@@ -50,6 +51,7 @@ function App() {
         {isFakeDark ? "☀️" : "🌙"}
       </button>
 
+      <PostProvider></PostProvider>
       <Header
         posts={searchedPosts}
         onClearPosts={handleClearPosts}
