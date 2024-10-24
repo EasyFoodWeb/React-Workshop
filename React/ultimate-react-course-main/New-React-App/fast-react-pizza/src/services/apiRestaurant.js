@@ -7,6 +7,49 @@ export async function getMenu() {
   if (!res.ok) throw Error('Failed getting menu');
 
   const { data } = await res.json();
+  // const data = [
+  //   {
+  //     id: 1,
+  //     name: 'Pizza 1',
+  //     unitPrice: 12,
+  //     ingredients: ['1', '2'],
+  //     soldOut: false,
+  //     imageUrl: '',
+  //   },
+  //   {
+  //     id: 2,
+  //     name: 'Pizza 2',
+  //     unitPrice: 25,
+  //     ingredients: ['2', '3'],
+  //     soldOut: false,
+  //     imageUrl: '',
+  //   },
+  //   {
+  //     id: 3,
+  //     name: 'Pizza 3',
+  //     unitPrice: 36,
+  //     ingredients: ['3', '4'],
+  //     soldOut: true,
+  //     imageUrl: '',
+  //   },
+  //   {
+  //     id: 4,
+  //     name: 'Pizza 4',
+  //     unitPrice: 50,
+  //     ingredients: ['4', '5'],
+  //     soldOut: false,
+  //     imageUrl: '',
+  //   },
+  //   {
+  //     id: 5,
+  //     name: 'Pizza 5',
+  //     unitPrice: 75,
+  //     ingredients: ['5', '2'],
+  //     soldOut: false,
+  //     imageUrl: '',
+  //   },
+  // ];
+
   return data;
 }
 
