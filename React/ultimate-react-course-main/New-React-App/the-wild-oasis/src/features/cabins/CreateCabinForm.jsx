@@ -7,31 +7,31 @@ import FormRow from "../../ui/FormRow";
 import { useForm } from "react-hook-form";
 
 import { useCreateCabin } from "./useCreateCabin";
-import { useEditCabin } from "./useEditCabin";
+import { useUpdateCabin } from "./useUpdateCabin";
 
 function CreateCabinForm({ cabinToEdit = {} }) {
   const { id: editId, ...editValues } = cabinToEdit;
 
-  const isEditSession = Boolean(editId);
+  const isUpdateSession = Boolean(editId);
 
   const { register, handleSubmit, reset, getValues, formState } = useForm({
-    defaultValues: isEditSession ? editValues : {},
+    defaultValues: isUpdateSession ? editValues : {},
   });
 
   const { errors } = formState;
   const { isCreating, createCabin } = useCreateCabin();
 
-  const { isEditing, editCabin } = useEditCabin();
+  const { isUpdating, updateCabin } = useUpdateCabin();
 
-  const isWorking = isCreating || isEditing;
+  const isWorking = isCreating || isUpdating;
 
   function onSubmit(data) {
     //console.log(data);
 
     const image = typeof data.image === "string" ? data.image : data.image[0];
 
-    if (isEditSession)
-      editCabin(
+    if (isUpdateSession)
+      updateCabin(
         { newCabinData: { ...data, image: image }, id: editId },
         {
           onSuccess: (data) => {
@@ -126,7 +126,7 @@ function CreateCabinForm({ cabinToEdit = {} }) {
           id="image"
           accept="image/*"
           {...register("image", {
-            required: isEditSession ? false : "This Field is required.",
+            required: isUpdateSession ? false : "This Field is required.",
           })}
           disabled={isWorking}
         />
@@ -138,7 +138,7 @@ function CreateCabinForm({ cabinToEdit = {} }) {
           Cancel
         </Button>
         <Button disabled={isWorking}>
-          {isEditSession ? "Edit cabin" : "Create new cabin"}
+          {isUpdateSession ? "Update cabin" : "Create new cabin"}
         </Button>
       </FormRow>
     </Form>
