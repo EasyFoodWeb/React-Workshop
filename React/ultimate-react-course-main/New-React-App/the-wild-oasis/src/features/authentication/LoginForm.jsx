@@ -4,7 +4,6 @@ import Form from "../../ui/Form";
 import SpinnerMini from "../../ui/SpinnerMini";
 import Input from "../../ui/Input";
 import FormRowVertical from "../../ui/FormRowVertical";
-import { login } from "../../services/apiAuth";
 import { useLogin } from "./useLogin";
 
 function LoginForm() {
