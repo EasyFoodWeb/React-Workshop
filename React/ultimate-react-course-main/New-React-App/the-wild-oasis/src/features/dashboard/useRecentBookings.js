@@ -9,11 +9,13 @@ export async function useRecentBookings() {
     ? 7
     : Number(searchParams.get("last"));
 
+  //console.log(numDays);
   const queryDate = subDays(new Date(), numDays).toISOString();
+  //console.log(queryDate);
   const { isLoading, data: bookings } = useQuery({
     queryFn: () => getBookingsAfterDate(queryDate),
     queryKey: ["bookings", `last-${numDays}`],
   });
-
-  return { isLoading, bookings };
+  //console.log(bookings);
+  return { bookings, isLoading };
 }
