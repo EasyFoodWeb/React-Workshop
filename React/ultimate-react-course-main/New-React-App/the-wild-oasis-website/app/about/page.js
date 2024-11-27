@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export const metadate = {
+export const metadata = {
   title: "About",
 };
 
