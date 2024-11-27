@@ -1,5 +1,9 @@
 import Link from "next/link";
 
+export const metadate = {
+  title: "About",
+};
+
 export default function Page() {
   return (
     <div>
